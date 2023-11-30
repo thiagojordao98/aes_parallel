@@ -386,6 +386,9 @@ uint8_t *aes_init(size_t key_size) {
 		case 16: Nk = 4; Nr = 10; break;
 		case 24: Nk = 6; Nr = 12; break;
 		case 32: Nk = 8; Nr = 14; break;
+		case 64: Nk = 16; Nr = 16; break;
+		case 128: Nk = 32; Nr = 20; break;
+		case 256: Nk = 64; Nr = 24; break;
 	}
 
 	return malloc(Nb*(Nr+1)*4);
